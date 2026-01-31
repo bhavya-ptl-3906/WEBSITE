@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in/Sign up</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .box{
+            height: 572px;
+            width: 480px;
+            border-radius: 15px;
+            border-color: black;
+            background-color: rgb(83, 109, 50);
+            margin: 79px 0px 0px 504px;
+            padding: 0px 0px 0px 0px;
+            animation: 1s linear 0s 1 alternate sun-rise;
+        }
+        @keyframes sun-rise {
+            from {
+                /* pushes the sun down past the viewport */
+                transform: translateY(110vh);
+            }
+            to {
+                /* returns the sun to its default position */
+                transform: translateY(0);
+            }
+        }
+        input{
+            margin: 0px 0px 0px 113px;
+            height: 25px;
+            width: 250px;
+            
+        }
+        h2{
+            text-align: center;
+            color: white;
+            padding-top: 26px;
+            border-color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 56px;
+        }
+        p{
+            color: white;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-left: 113px;
+            margin-top: 5px;
+        }
+        #togglePassword{
+            width: 25px;
+            height: 25px;
+            display: inline; 
+            margin-left: -6.5%; 
+            vertical-align: middle;
+        }
+        .btn1{
+            margin-left: 205px;
+            margin-top: 26px;
+            width: 75px;
+            height: 35px;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: aqua;
+            color: black;
+        }
+        .one{
+            color: white;
+            font-size: smaller;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 169px;
+            margin-top: 19px;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Client Login<hr color="black"></h2>
+        <form>
+        <p>Enter your e-mail:</p>
+        <input type="email" name="e-mail" id="mail"><br><br><br>
+        <p>Enter your password:</p>
+        <input type="password" name="password" id="passwd">
+        <img src= "https://media.geeksforgeeks.org/wp-content/uploads/20210917145551/eye.png"  id="togglePassword"><br><br>
+
+        <button type="submit" class="btn1"><a href="#">Login</a></button>
+        <p class="one">Don't have an Account?</p>
+        <p class="one"><a href="#"><center> Click Here </center></a></p>
+        <p class="one"> to Create or Activate your Account</p>
+        <script>
+            const togglePassword =
+                document.querySelector('#togglePassword');
+
+            const password = 
+                document.querySelector('#passwd');
+
+            togglePassword.
+            addEventListener('click', function (e) {
+
+                // Toggle the type attribute 
+                const type = password.getAttribute(
+                    'type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+
+                // Toggle the eye slash icon 
+                if (togglePassword.src.match(
+                    "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash.png")) {
+                     togglePassword.src =
+                    "https://media.geeksforgeeks.org/wp-content/uploads/20210917145551/eye.png";
+                } else {
+                    togglePassword.src =
+                    "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash.png";
+                }
+            }); 
+            
+        </script>
+        </form>
+    </div>
+</body>
+</html>
