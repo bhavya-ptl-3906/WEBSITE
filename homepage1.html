@@ -29,10 +29,18 @@
             width: 250px;
             
         }
-        .firstname, .middlename, .lastname{
+        #num{
+            width: 195px;
+        }
+        .firstname, .middlename, .lastname, .email, .mobile{
             color: white;
             font-size: large;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0px 0px 0px 0px;
+        }
+        select{
+            height: 25px;
+            width: 55px;
             margin: 0px 0px 0px 0px;
         }
         .box1{
@@ -56,6 +64,20 @@
             margin: -85px 0px 0px 680px;
             
         }
+        .box4{
+            height: 85px;
+            width: 270px;
+            background-color: aqua;
+            margin: 40px 0px 0px 40px;
+            
+        }
+        .box5{
+            height: 85px;
+            width: 270px;
+            background-color: aqua;
+            margin: -85px 0px 0px 360px;
+            
+        }
     </style>
 </head>
 <body>
@@ -70,6 +92,19 @@
         </div>
         <div class="box3">
             <p class="lastname">Enter your Last Name:</p><input type="text" name="Name" id="lname"></input>
+        </div>
+        <div class="box4">
+            <p class="email">Enter your E-mail Address:</p><input type="email" name="email" id="email"></input>
+        </div>
+        <div class="box5">
+            <p class="mobile">Enter your Contact Number:</p>
+            <select>
+                <option value="1" selected>+91</option>
+                <option value="2">+1</option>
+                <option value="3">+404</option>
+                <option value="4">+132</option>
+            </select>
+            <input type="text" name="number" id="num"></input>
         </div>
     </div>
     </form>
