@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | DesiFusion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Desi<span>Fusion</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="cart.html" class="active">Cart (2)</a>
+        </div>
+    </nav>
+
+    <main class="cart-wrapper animate-in">
+        <h1 class="cart-header">Your Cart</h1>
+        
+        <div class="cart-layout">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/100/2a2a35/ffffff?text=Watch" alt="Watch">
+                    <div class="item-details">
+                        <h3>Quantum Smart Watch Pro</h3>
+                        <div class="price">$299.00</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="qty-controls">
+                            <button>-</button><input type="text" value="1" readonly><button>+</button>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/100/2a2a35/ffffff?text=Earbuds" alt="Earbuds">
+                    <div class="item-details">
+                        <h3>Sonic Noise-Canceling Earbuds</h3>
+                        <div class="price">$149.00</div>
+                    </div>
+                    <div class="item-actions">
+                        <div class="qty-controls">
+                            <button>-</button><input type="text" value="1" readonly><button>+</button>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row"><span>Subtotal</span><span>$448.00</span></div>
+                <div class="summary-row"><span>Shipping</span><span>Calculated at checkout</span></div>
+                <div class="summary-row"><span>Tax</span><span>$35.84</span></div>
+                <div class="summary-total"><span>Total</span><span>$483.84</span></div>
+                
+                <a href="checkout.html" class="btn btn-glow checkout-btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DesiFusion Tech E-Commerce.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

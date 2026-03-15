@@ -1,0 +1,99 @@
+.checkout-wrapper {
+            padding: 120px 5% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .checkout-layout {
+            display: flex;
+            gap: 50px;
+        }
+
+        
+        .checkout-form-area { flex: 1.5; }
+        
+        .form-section {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .form-section h2 { margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .input-row .input-group { flex: 1; }
+
+        label {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            padding: 12px 15px;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent-glow);
+            box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+        }
+
+        
+        .checkout-sidebar {
+            flex: 1;
+        }
+
+        .mini-summary {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: sticky;
+            top: 100px;
+        }
+
+        .mini-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .mini-item img { width: 50px; border-radius: 8px; margin-right: 15px;}
+        .mini-item-info { flex-grow: 1; font-size: 0.9rem;}
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: var(--accent-glow);
+        }
+
+        @media (max-width: 900px) {
+            .checkout-layout { flex-direction: column-reverse; }
+            .input-row { flex-direction: column; gap: 0; }
+            .checkout-sidebar { width: 100%; }
+        }

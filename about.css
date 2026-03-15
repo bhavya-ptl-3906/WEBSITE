@@ -1,0 +1,55 @@
+ .about-hero {
+            padding: 150px 5% 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .about-hero p { font-size: 1.2rem; color: var(--text-muted); }
+
+        .mission-section {
+            display: flex;
+            gap: 50px;
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .mission-text { flex: 1; }
+        .mission-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--accent-glow); }
+        .mission-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; }
+        
+        .mission-image {
+            flex: 1;
+            background: var(--bg-card);
+            border-radius: 20px;
+            height: 400px;
+            background-image: url('https://www.goodfreephotos.com/albums/united-states/new-york/new-york-city/new-york-cityscape-with-lighted-up-skyscrapers.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .value-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.02);
+            transition: var(--transition);
+        }
+        .value-card:hover { transform: translateY(-10px); border-color: var(--accent-glow); }
+        .value-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        
+        @media (max-width: 800px) {
+            .mission-section { flex-direction: column; }
+            .mission-image { width: 100%; }
+        }
