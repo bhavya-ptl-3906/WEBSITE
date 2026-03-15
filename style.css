@@ -1,0 +1,124 @@
+
+:root {
+    --bg-dark: #0f0f13;
+    --bg-card: #1c1c24;
+    --text-main: #f5f5f7;
+    --text-muted: #a1a1aa;
+    --accent-glow: #8b5cf6; /* Vibrant Purple */
+    --accent-hover: #a78bfa;
+    --glass-bg: rgba(28, 28, 36, 0.7);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.logo span { color: var(--accent-glow); }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-main);
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-glow {
+    background: var(--accent-glow);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-glow:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--text-muted);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-main);
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+
+footer {
+    background: var(--bg-card);
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}

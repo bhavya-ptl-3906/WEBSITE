@@ -1,0 +1,101 @@
+
+        .product-container {
+            display: flex;
+            gap: 60px;
+            padding: 140px 5% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .product-image {
+            flex: 1;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-image img:hover { transform: scale(1.05); }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .product-info .price {
+            font-size: 2rem;
+            color: var(--accent-glow);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .purchase-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+            padding: 5px 15px;
+        }
+
+        .quantity button {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+        
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .add-to-cart {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+        }
+
+        
+        @media (max-width: 800px) {
+            .product-container { flex-direction: column; padding-top: 100px; }
+            .purchase-actions { flex-direction: column; }
+            .add-to-cart { width: 100%; }
+        }

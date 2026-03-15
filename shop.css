@@ -1,0 +1,75 @@
+
+        .shop-header {
+            text-align: center;
+            padding: 120px 20px 40px;
+            background: linear-gradient(to bottom, #1a1525, var(--bg-dark));
+        }
+        .shop-header h1 { font-size: 3rem; margin-bottom: 10px; }
+        
+        .shop-container {
+            display: flex;
+            gap: 40px;
+            padding: 0 5% 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        
+        .filters {
+            width: 250px;
+            flex-shrink: 0;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.02);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        .filter-group { margin-bottom: 25px; }
+        .filter-group h4 { margin-bottom: 15px; color: var(--text-main); }
+        .filter-group label {
+            display: block;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-group label:hover { color: var(--accent-hover); }
+        .filter-group input { margin-right: 10px; accent-color: var(--accent-glow); }
+
+        
+        .shop-grid {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.02);
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+        .card .price { color: var(--accent-glow); font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;}
+        
+        
+        @media (max-width: 900px) {
+            .shop-container { flex-direction: column; }
+            .filters { width: 100%; position: relative; top: 0; }
+        }
